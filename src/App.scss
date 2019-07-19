@@ -1,3 +1,14 @@
+//COLOUR
+
+$a: #303030;
+$b: #0d47a1;
+$c: #cddc39;
+$d: #a5c3d2;
+$e: #e8e8e8;
+$f: #f8f8f8;
+
+//TYPE
+
 .entry-title {
   border: 0 !important;
   font-size: 0 !important;
@@ -33,83 +44,73 @@ h1 {
   margin: 0;
   padding-bottom: 10px;
   padding-top: 60px;
-  color: #303030;
+  color: $a;
   font-weight: 100;
   font-family: "butlerbold", sans-serif;
-}
-
-h1 span {
-  color: #cddc39;
+  span {
+    color: $c;
+  }
 }
 
 h2 {
   font-size: 30px;
   padding-bottom: 0.3em;
   line-height: 36px;
-  color: #0d47a1;
+  color: $b;
   font-weight: 400;
   font-family: "Open Sans", sans-serif;
   margin: 0;
 }
-
 h3 {
   font-size: 18px;
   line-height: 24px;
-  color: #303030;
+  color: $a;
   font-weight: 700;
   margin: 0;
   font-family: "Open Sans", sans-serif;
 }
-
 h4 {
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
-  color: #303030;
+  color: $a;
   font-family: "Open Sans", sans-serif;
 }
-
 h5 {
   font-size: 16px;
   line-height: 18px;
-  color: #303030;
+  color: $a;
   font-weight: 700;
   font-family: "Open Sans", sans-serif;
 }
-
 h6 {
   font-size: 14px;
   line-height: 16px;
-  color: #303030;
+  color: $a;
   font-weight: 700;
   font-family: "Open Sans", sans-serif;
 }
 
 p {
-  color: #303030;
+  color: $a;
   font-family: "Open Sans", sans-serif;
   margin: 0 auto 1.5em auto;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  justify-content: left;
   font-size: 1em;
   font-weight: 300;
-}
 
-p a {
-  color: #cddc39;
-  font-family: "Open Sans", sans-serif;
-  margin: 0 auto 1.5em auto;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  font-weight: 700;
-  font-size: 1em;
-}
-
-p a:hover {
-  color: #cddc39;
-  text-decoration: underline;
+  a {
+    color: $c;
+    font-family: "Open Sans", sans-serif;
+    margin: 0 auto 1.5em auto;
+    justify-content: left;
+    font-weight: 700;
+    font-size: 1em;
+  }
+  a:hover {
+    color: $c;
+    text-decoration: underline;
+  }
 }
 
 body {
@@ -117,8 +118,7 @@ body {
 }
 
 .App-logo {
-  -webkit-animation: App-logo-spin infinite 20s linear;
-          animation: App-logo-spin infinite 20s linear;
+  animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
   pointer-events: none;
 }
@@ -126,19 +126,10 @@ body {
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -147,45 +138,32 @@ body {
   color: #61dafb;
 }
 
-@-webkit-keyframes App-logo-spin {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
 @keyframes App-logo-spin {
   from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 /* Scemantic-ui */
+
 .ui.circular.button {
   border-radius: 10em;
-  -webkit-box-shadow: 1px 3px 4px #ddd;
-          box-shadow: 1px 3px 4px #ddd;
+  box-shadow: 1px 3px 4px #ddd;
 }
 
 .ui.circular.button:hover {
   border-radius: 10em;
-  -webkit-box-shadow: 1px 3px 4px #999;
-          box-shadow: 1px 3px 4px #999;
+  box-shadow: 1px 3px 4px #999;
 }
 
 .nav-bar {
   margin-right: 30px;
   margin-top: 10px;
 }
+
 
 hr {
   border: 0;
@@ -212,28 +190,27 @@ hr {
 }
 
 .section1 {
-  background: #f8f8f8;
+  background: $f;
   width: 100%;
 }
 
 .section3 {
-  background: #f8f8f8;
+  background: $f;
   width: 100%;
 }
 
 .footer-section {
-  background: #303030;
+  background: $a;
   width: 100%;
-  padding-top: 40px;
+  padding-top: 40px; 
 }
 
-.ui.progress > .label {
+.ui.progress>.label {
   margin-top: 0 !important;
   line-height: .8;
 }
 
 .toolcolumn, .skillcolumn {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
+  padding-top:0 !important;
+  padding-bottom:0 !important;
 }
-/*# sourceMappingURL=App.css.map */
