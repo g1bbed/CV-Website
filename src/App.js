@@ -32,14 +32,18 @@ class App extends Component {
           src="https://editor.p5js.org/stephanieclaire/embed/nEtA2Kp-P"
           scrolling="no"
           title="iframe"
+          frameBorder="0" 
+          seamless
           style={{
             width: "100%",
             height: "270px",
             border: 0,
             marginTop: "-50px",
-            overflow: "hidden"
+            overflow: "hidden",
+            marginLeft: '20px'
+
           }}
-        />
+        ></iframe>
         <Intro />
         <Grid>
           <Grid.Column width={16}>

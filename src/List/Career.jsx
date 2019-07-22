@@ -32,7 +32,7 @@ class Career extends Component {
               </p>
             ))}
             {career.button1.map(button1 => (
-              <a href={button1.link} target="_blank" rel="noopener noreferrer">
+              <a href={button1.link} target="_blank" rel="noopener noreferrer" key={button1.id}>
               <Button
                 size="mini"
                 basic

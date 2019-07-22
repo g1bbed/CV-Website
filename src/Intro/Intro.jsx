@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Grid, Image, Button } from "semantic-ui-react";
 import me from "../images/me.jpg";
+import cv from "../files/StephanieClaireCurtisCV.pdf";
 
 class Intro extends Component {
   render() {
@@ -18,19 +19,20 @@ class Intro extends Component {
               Stephanie Claire Curtis - Front-end Developer and Graphic Designer
             </h4>
             <p>
-              I am a creative who seeks new information. I really
-              like to understand the complete process for creating Apps and
-              Websites from Design straight to Front End Development. I have an
-              eye for detail and practice design techniques and rules. Also, I
-              like working in a team, you'll learn faster and much more. I have
+              I am a creative who seeks new information. I really like to
+              understand the complete process for creating Apps and Websites
+              from Design straight to Front End Development. I have an eye for
+              detail and practice design techniques and rules. Also, I like
+              working in a team, you'll learn faster and much more. I have
               produced close to five hundred websites and drafts for small
               businesses throughout Queensland.
             </p>
-            <form method="get" action="file.doc">
+
+            <a href={cv} download>
               <Button size="mini" basic color="blue" type="submit">
                 <b>DOWNLOAD MY CV</b>
               </Button>
-            </form>
+            </a>
           </Grid.Column>
         </Grid>
       </div>

@@ -7,6 +7,29 @@ import group15 from "../images/designeasy/5.jpg";
 import group16 from "../images/designeasy/6.jpg";
 import group17 from "../images/designeasy/7.jpg";
 import group18 from "../images/designeasy/8.jpg";
+import group20 from "../images/outlanddenim/00.jpg";
+import group21 from "../images/outlanddenim/01.jpg";
+import group22 from "../images/outlanddenim/02.jpg";
+import group23 from "../images/outlanddenim/03.jpg";
+import group24 from "../images/outlanddenim/04.jpg";
+import group25 from "../images/outlanddenim/05.jpg";
+import group26 from "../images/outlanddenim/06.jpg";
+import group27 from "../images/outlanddenim/07.jpg";
+import group28 from "../images/outlanddenim/08.jpg";
+import group29 from "../images/outlanddenim/09.jpg";
+import group210 from "../images/outlanddenim/010.jpg";
+import group211 from "../images/outlanddenim/011.jpg";
+import group212 from "../images/outlanddenim/1.jpg";
+import group213 from "../images/outlanddenim/30.jpg";
+import group214 from "../images/outlanddenim/31.jpg";
+import group215 from "../images/outlanddenim/32.jpg";
+import group216 from "../images/outlanddenim/33.jpg";
+import group217 from "../images/outlanddenim/34.jpg";
+import group218 from "../images/outlanddenim/35.jpg";
+import group219 from "../images/outlanddenim/36.jpg";
+import group220 from "../images/outlanddenim/37.jpg";
+import group221 from "../images/outlanddenim/38.jpg";
+import group222 from "../images/outlanddenim/39.jpg";
 
 const Careers = [
   {
@@ -30,17 +53,108 @@ const Careers = [
       {
         id: "1a",
         desc: "Dropbox",
-        link: "https://www.dropbox.com/sh/2mg94ordjo7xmay/AAB-CYTt_KLISGRsTwfE97wfa?dl=0"
+        link:
+          "https://www.dropbox.com/sh/2mg94ordjo7xmay/AAB-CYTt_KLISGRsTwfE97wfa?dl=0"
       },
       {
         id: "2a",
         desc: "Outland Denim Website",
         link: "https://www.outlanddenim.co.uk"
-
       }
     ],
     gallery: [
-      
+      {
+        id: "1a",
+        photo: group20
+      },
+      {
+        id: "2a",
+        photo: group21
+      },
+      {
+        id: "3a",
+        photo: group22
+      },
+      {
+        id: "4a",
+        photo: group23
+      },
+      {
+        id: "5a",
+        photo: group24
+      },
+      {
+        id: "6a",
+        photo: group25
+      },
+      {
+        id: "7a",
+        photo: group26
+      },
+      {
+        id: "8a",
+        photo: group27
+      },
+      {
+        id: "9a",
+        photo: group28
+      },
+      {
+        id: "10a",
+        photo: group29
+      },
+      {
+        id: "11a",
+        photo: group210
+      },
+      {
+        id: "12a",
+        photo: group211
+      },
+      {
+        id: "13a",
+        photo: group212
+      },
+      {
+        id: "14a",
+        photo: group213
+      },
+      {
+        id: "15a",
+        photo: group214
+      },
+      {
+        id: "16a",
+        photo: group215
+      },
+      {
+        id: "23a",
+        photo: group216
+      },
+      {
+        id: "17a",
+        photo: group217
+      },
+      {
+        id: "18a",
+        photo: group218
+      },
+      {
+        id: "19a",
+        photo: group219
+      },
+      {
+        id: "20a",
+        photo: group220
+      },
+      {
+        id: "21a",
+        photo: group221
+      },
+      {
+        id: "22a",
+        photo: group222
+      }
     ]
   },
   {
@@ -59,7 +173,8 @@ const Careers = [
       {
         id: "1a",
         desc: "Dropbox",
-        link: "https://www.dropbox.com/sh/c0pxwdb8hwgxacv/AADQ8VQisNChXbiTxPLKjZqra?dl=0"
+        link:
+          "https://www.dropbox.com/sh/c0pxwdb8hwgxacv/AADQ8VQisNChXbiTxPLKjZqra?dl=0"
       }
     ],
     gallery: [
@@ -120,9 +235,7 @@ const Careers = [
         link: "https://www.stellarbpo.com.au/"
       }
     ],
-    gallery: [
-
-    ]
+    gallery: []
   }
 ];
 

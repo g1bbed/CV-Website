@@ -15,6 +15,10 @@
   text-align: right;
 }
 
+.white {
+  color: #fff !important;
+}
+
 h1,
 h2,
 h3,
