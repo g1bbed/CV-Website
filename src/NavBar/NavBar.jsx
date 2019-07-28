@@ -9,7 +9,7 @@ class NavBar extends Component {
         <Grid>
           <Grid.Column
             width={16}
-            style={{ marginRight: "30px", marginTop: "10px" }}
+            style={{ marginRight: "1%", marginTop: "10px", zIndex: '999' }}
           >
             {/* <Button class="arrow-button" color="black" icon="angle down large" floated="right" style={{borderRadius: 0, height: '50px'}}/> */}
             <a

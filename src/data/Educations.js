@@ -13,7 +13,7 @@ const Educations = [
       date: "Dec 2002",
       category: "Highschool",
       description:
-        "I graduated highschool, where I enjoyed doing history, arts and science. Near completing Highschool I debated with myself over my future as I really wanted to use my natural talent for creativity combined with technology. On deciding that I will probably never make video games I decided to make websites.",
+        "I graduated High school, where I enjoyed doing history, arts and science. Near completing High school I debated with myself over my future as I really wanted to use my natural talent for creativity combined with technology. While Video game development was my passion at the time, I decided that my skills where better suited in website development.",
     }
   ];
   

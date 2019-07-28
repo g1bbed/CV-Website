@@ -1,19 +1,47 @@
 import React, { Component, Fragment } from "react";
 import { Grid, GridColumn, Button } from "semantic-ui-react";
 import { LightgalleryProvider, LightgalleryItem } from "react-lightgallery";
+import Swiper from "react-id-swiper";
 
 class Career extends Component {
   state = { activeIndex: 0 };
 
   render() {
+    const params = {
+      slidesPerView: 5,
+      spaceBetween: 50,
+      pagination: {
+        clickable: true
+      },
+      breakpoints: {
+        1400: {
+          slidesPerView: 3,
+          spaceBetween: 20
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20
+        }
+      }
+    };
+
     const { career } = this.props;
 
     const PhotoItem = ({ image, group }) => (
-      <div style={{ maxWidth: "250px", width: "200px", padding: "5px" }}>
-        <LightgalleryItem group={group} src={image}>
-          <img src={image} style={{ width: "100%" }} alt="hi" />
-        </LightgalleryItem>
-      </div>
+      <LightgalleryItem group={group} src={image}>
+        {/* <img src={image} style={{ width: "100%", height: "auto" }} alt="hi" /> */}
+        <div style={{backgroundImage: `url(${image})`}} className="LightGallerySlider">
+
+        </div>
+      </LightgalleryItem>
     );
 
     return (
@@ -32,16 +60,21 @@ class Career extends Component {
               </p>
             ))}
             {career.button1.map(button1 => (
-              <a href={button1.link} target="_blank" rel="noopener noreferrer" key={button1.id}>
-              <Button
-                size="mini"
-                basic
-                color="blue"
+              <a
+                href={button1.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 key={button1.id}
-                button1={button1}
               >
-                <b>{button1.desc}</b>
-              </Button>
+                <Button
+                  size="mini"
+                  basic
+                  color="blue"
+                  key={button1.id}
+                  button1={button1}
+                >
+                  <b>{button1.desc}</b>
+                </Button>
               </a>
             ))}
             <LightgalleryProvider
@@ -49,15 +82,17 @@ class Career extends Component {
               animateThumb="false"
               showThumbByDefault="false"
             >
-              <div style={{ display: "flex", alignItems: "center" }}>
+              <Swiper {...params}>
                 {career.gallery.map(gallery => (
-                  <PhotoItem
-                    key={gallery.id}
-                    image={gallery.photo}
-                    group="group1"
-                  />
+                  <div key={gallery.id}>
+                    <PhotoItem
+                      key={gallery.id}
+                      image={gallery.photo}
+                      group="group1"
+                    />
+                  </div>
                 ))}
-              </div>
+              </Swiper>
             </LightgalleryProvider>
           </GridColumn>
         </Grid>
