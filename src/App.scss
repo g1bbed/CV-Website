@@ -268,7 +268,14 @@ hr {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 175px;
+  height: 550px;
+  overflow: hidden;
+
+  Image {
+    height: auto;
+    position: absolute;
+    width: 100%;
+  }
 }
 
 .swiper-slide {
@@ -277,4 +284,17 @@ hr {
 
 .swiper-container {
   padding-top: 20px;
+}
+
+.MobileLogo {
+  -moz-transform: scale(0.65, 0.65); 
+  -webkit-transform: scale(0.65, 0.65); 
+  -o-transform: scale(0.65, 0.65);
+  -ms-transform: scale(0.65, 0.65);
+  transform: scale(0.65, 0.65); 
+  -moz-transform-origin: top left;
+  -webkit-transform-origin: top left;
+  -o-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
 }

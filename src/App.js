@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./fonts/stylesheet.css";
 import "./App.css";
 import NavBar from "./NavBar/NavBar";
-import { Grid, Segment, Responsive, Image } from "semantic-ui-react";
+import { Grid, Segment, Responsive } from "semantic-ui-react";
 import CareerList from "./List/CareerList";
 import Careers from "./data/Careers";
 import Educations from "./data/Educations";
@@ -15,6 +15,7 @@ import Footer from "./Footer/Footer";
 import Intro from "./Intro/Intro";
 import "lightgallery.js/dist/css/lightgallery.css";
 import logo from "./images/logo.png";
+import LazyLoad from "react-lazyload";
 
 const careerdata = Careers;
 const educationdata = Educations;
@@ -24,34 +25,54 @@ const skilldata = Skills;
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <Responsive className="App">
         <NavBar />
-        <div className="noborders">
-          {/*Unfortunately there is no p5 support in react to date so an iframe is used in this case*/}
-          <Responsive as={Segment} minWidth={550}>
+        <Responsive className="noborders">
+          {/*Unfortunately there is very little p5 support in react to date so an iframe is used in this case*/}
+          <Responsive as={Segment} minWidth={550} className="holds-the-iframe">
+            <LazyLoad height={190} datasource="/path/to/original">
+              <iframe
+                src="https://editor.p5js.org/stephanieclaire/embed/nEtA2Kp-P"
+                scrolling="no"
+                title="iframe"
+                frameBorder="0"
+                preload="none"
+                onLoad={this.hideSpinner}
+                seamless
+                style={{
+                  width: "100%",
+                  height: "270px",
+                  border: 0,
+                  marginTop: "-50px",
+                  paddingLeft: "20px",
+                  zIndex: "-1"
+                }}
+              />
+            </LazyLoad>
+          </Responsive>
+
+          <Responsive as={Segment} maxWidth={549} className="MobileLogo">
+          <LazyLoad height={190} datasource="/path/to/original">
             <iframe
               src="https://editor.p5js.org/stephanieclaire/embed/nEtA2Kp-P"
               scrolling="no"
               title="iframe"
               frameBorder="0"
+              preload="none"
+              onLoad={this.hideSpinner}
               seamless
               style={{
-                width: "100%",
+                width: "600px",
                 height: "270px",
                 border: 0,
-                marginTop: "-50px",
+                marginTop: "-90px",
                 paddingLeft: "20px",
-                zIndex: "-1"
+                zIndex: "-1",
               }}
             />
+            </LazyLoad>
           </Responsive>
-          <Responsive as={Segment} maxWidth={549}>
-            <Image
-              src={logo}
-              style={{ width: "100%", height: "auto", padding: "40px 20px" }}
-            />
-          </Responsive>
-        </div>
+        </Responsive>
         <Intro />
         <Grid>
           <Grid.Column width={16}>
@@ -61,12 +82,10 @@ class App extends Component {
             <hr className="header2" />
           </Grid.Column>
         </Grid>
-        <Grid>
-          <Grid.Column width={16}>
+  
             <CareerList careerdata={careerdata} />
             <EducationList educationdata={educationdata} />
-          </Grid.Column>
-        </Grid>
+
         <div className="section3">
           <Grid>
             <Grid.Column width={16}>
@@ -81,7 +100,7 @@ class App extends Component {
         <SkillList skilldata={skilldata} />
         <ToolList tooldata={tooldata} />
         <Footer />
-      </div>
+      </Responsive>
     );
   }
 }

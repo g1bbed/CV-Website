@@ -30,6 +30,9 @@ import group219 from "../images/outlanddenim/36.jpg";
 import group220 from "../images/outlanddenim/37.jpg";
 import group221 from "../images/outlanddenim/38.jpg";
 import group222 from "../images/outlanddenim/39.jpg";
+import homepage from "../images/outlanddenim/Homepage.jpg";
+import ourstorypage from "../images/outlanddenim/ourstorypage.jpg";
+
 
 const Careers = [
   {
@@ -63,6 +66,14 @@ const Careers = [
       }
     ],
     gallery: [
+      {
+        id: "homepage",
+        photo: homepage
+      },
+      {
+        id: "ourstorypage",
+        photo: ourstorypage
+      },
       {
         id: "1a",
         photo: group20
@@ -216,27 +227,27 @@ const Careers = [
       }
     ]
   },
-  {
-    id: "3",
-    title: "Stellar Adelaide",
-    date: "Aug 2007 - Dec 2010",
-    category: "Inbound Consultant",
-    description: [
-      {
-        id: "a",
-        para:
-          "This position included Managing large amounts of inbound calls for Telstra in a timely manner. Following call center “scripts” when handling different topics. Identifying customers' needs, clarify information, research every issue and providing solutions."
-      }
-    ],
-    button1: [
-      {
-        id: "1a",
-        desc: "Stellar Website",
-        link: "https://www.stellarbpo.com.au/"
-      }
-    ],
-    gallery: []
-  }
+  // {
+  //   id: "3",
+  //   title: "Stellar Adelaide",
+  //   date: "Aug 2007 - Dec 2010",
+  //   category: "Inbound Consultant",
+  //   description: [
+  //     {
+  //       id: "a",
+  //       para:
+  //         "This position included Managing large amounts of inbound calls for Telstra in a timely manner. Following call center “scripts” when handling different topics. Identifying customers' needs, clarify information, research every issue and providing solutions."
+  //     }
+  //   ],
+  //   button1: [
+  //     {
+  //       id: "1a",
+  //       desc: "Stellar Website",
+  //       link: "https://www.stellarbpo.com.au/"
+  //     }
+  //   ],
+  //   gallery: []
+  // }
 ];
 
 export default Careers;

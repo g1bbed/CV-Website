@@ -277,7 +277,14 @@ hr {
 
 .LightGallerySlider {
   background-size: cover;
-  height: 175px;
+  height: 550px;
+  overflow: hidden;
+}
+
+.LightGallerySlider Image {
+  height: auto;
+  position: absolute;
+  width: 100%;
 }
 
 .swiper-slide {
@@ -286,5 +293,12 @@ hr {
 
 .swiper-container {
   padding-top: 20px;
+}
+
+.MobileLogo {
+  -webkit-transform: scale(0.65, 0.65);
+  transform: scale(0.65, 0.65);
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
 }
 /*# sourceMappingURL=App.css.map */
