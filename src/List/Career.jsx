@@ -8,7 +8,7 @@ class Career extends Component {
 
   render() {
     const params = {
-      slidesPerView: 3,
+      slidesPerView: 2,
       spaceBetween: 50,
       pagination: {
         clickable: true
@@ -19,19 +19,19 @@ class Career extends Component {
       },
       breakpoints: {
         1400: {
-          slidesPerView: 3,
+          slidesPerView: 2,
           spaceBetween: 20
         },
         768: {
-          slidesPerView: 3,
+          slidesPerView: 1,
           spaceBetween: 20
         },
         640: {
-          slidesPerView: 2,
+          slidesPerView: 1,
           spaceBetween: 20
         },
         320: {
-          slidesPerView: 2,
+          slidesPerView: 1,
           spaceBetween: 20
         }
       }
