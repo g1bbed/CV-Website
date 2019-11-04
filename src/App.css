@@ -276,15 +276,10 @@ hr {
 }
 
 .LightGallerySlider {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  height: 550px;
-  overflow: hidden;
-}
-
-.LightGallerySlider Image {
-  height: auto;
-  position: absolute;
-  width: 100%;
 }
 
 .swiper-slide {

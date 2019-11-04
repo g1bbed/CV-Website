@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { Grid, GridColumn, Button, Image } from "semantic-ui-react";
+import { Grid, GridColumn, Button,  } from "semantic-ui-react";
 import { LightgalleryProvider, LightgalleryItem } from "react-lightgallery";
 import Swiper from "react-id-swiper";
 
@@ -8,7 +8,7 @@ class Career extends Component {
 
   render() {
     const params = {
-      slidesPerView: 1,
+      slidesPerView: 3,
       spaceBetween: 50,
       pagination: {
         clickable: true
@@ -19,19 +19,19 @@ class Career extends Component {
       },
       breakpoints: {
         1400: {
-          slidesPerView: 1,
+          slidesPerView: 3,
           spaceBetween: 20
         },
         768: {
-          slidesPerView: 1,
+          slidesPerView: 3,
           spaceBetween: 20
         },
         640: {
-          slidesPerView: 1,
+          slidesPerView: 2,
           spaceBetween: 20
         },
         320: {
-          slidesPerView: 1,
+          slidesPerView: 2,
           spaceBetween: 20
         }
       }
@@ -43,8 +43,10 @@ class Career extends Component {
       <LightgalleryItem group={group} src={image}>
         {/* <img src={image} style={{ width: "100%", height: "auto" }} alt="hi" /> */}
         
-        <div className="LightGallerySlider">
-          <Image src={image}/>
+        <div
+          style={{ backgroundImage: `url(${image})` }}
+          className="LightGallerySlider"
+        >
         </div>
       </LightgalleryItem>
     );
