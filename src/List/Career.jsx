@@ -39,7 +39,7 @@ class Career extends Component {
 
     const { career } = this.props;
 
-    const PhotoItem = ({ image, group }) => (
+    const PhotoItem = ({ image, group, id }) => (
       <LightgalleryItem group={group} src={image}>
         {/* <img src={image} style={{ width: "100%", height: "auto" }} alt="hi" /> */}
         

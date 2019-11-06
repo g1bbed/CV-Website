@@ -32,6 +32,12 @@ import group221 from "../images/outlanddenim/38.jpg";
 import group222 from "../images/outlanddenim/39.jpg";
 import homepage from "../images/outlanddenim/Homepage.jpg";
 import ourstorypage from "../images/outlanddenim/ourstorypage.jpg";
+import ourbusinessmodel from "../images/outlanddenim/ourbusinessmodel.jpg";
+import ourprocess from "../images/outlanddenim/ourprocess.jpg";
+import ourstory from "../images/outlanddenim/ourstory.jpg";
+import outland_journal from "../images/outlanddenim/outland_journal.jpg";
+import productpage from "../images/outlanddenim/productpage.jpg";
+
 
 
 const Careers = [
@@ -73,6 +79,24 @@ const Careers = [
       {
         id: "ourstorypage",
         photo: ourstorypage
+      },{
+        id: "ourbusinessmodel",
+        photo: ourbusinessmodel
+      },
+      {
+        id: "ourprocess",
+        photo: ourprocess
+      },{
+        id: "ourstory",
+        photo: ourstory
+      },
+      {
+        id: "outland_journal",
+        photo: outland_journal
+      },
+      {
+        id: "productpage",
+        photo: productpage
       },
       {
         id: "1a",
