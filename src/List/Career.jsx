@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { Grid, GridColumn, Button,  } from "semantic-ui-react";
+import { Grid, GridColumn, Button } from "semantic-ui-react";
 import { LightgalleryProvider, LightgalleryItem } from "react-lightgallery";
 import Swiper from "react-id-swiper";
 
@@ -9,7 +9,7 @@ class Career extends Component {
   render() {
     const params = {
       slidesPerView: 2,
-      spaceBetween: 50,
+      spaceBetween: 20,
       pagination: {
         clickable: true
       },
@@ -39,39 +39,38 @@ class Career extends Component {
 
     const { career } = this.props;
 
-    const PhotoItem = ({ image, group, id }) => (
+    const PhotoItem = ({ image, group }) => (
       <LightgalleryItem group={group} src={image}>
         {/* <img src={image} style={{ width: "100%", height: "auto" }} alt="hi" /> */}
-        
-        <div
-          style={{ backgroundImage: `url(${image})` }}
-          className="LightGallerySlider"
-        >
-        </div>
+ 
+          <div
+            style={{ backgroundImage: `url(${image})` }}
+            className="LightGallerySlider"
+          ></div>
+
       </LightgalleryItem>
     );
 
     return (
       <Fragment>
-
-            <LightgalleryProvider
-              thumbnail="true"
-              animateThumb="false"
-              showThumbByDefault="false"
-            >
-              <Swiper {...params}>
-                {career.gallery.map(gallery => (
-                  <div key={gallery.id}>
-                    <PhotoItem
-                      key={gallery.id}
-                      image={gallery.photo}
-                      group="group1"
-                    />
-                  </div>
-                ))}
-              </Swiper>
-            </LightgalleryProvider>
-            <hr />
+        <LightgalleryProvider
+          thumbnail="true"
+          animateThumb="false"
+          showThumbByDefault="false"
+        >
+          <Swiper {...params}>
+            {career.gallery.map(gallery => (
+              <div key={gallery.id}>
+                <PhotoItem
+                  key={gallery.id}
+                  image={gallery.photo}
+                  group="group1"
+                />
+              </div>
+            ))}
+          </Swiper>
+        </LightgalleryProvider>
+        <hr />
 
         <Grid container doubling columns={2}>
           <GridColumn width={6} className="right">
