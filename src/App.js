@@ -14,7 +14,6 @@ import SkillList from "./List/SkillList";
 import Footer from "./Footer/Footer";
 import Intro from "./Intro/Intro";
 import "lightgallery.js/dist/css/lightgallery.css";
-import logo from "./images/logo.png";
 import LazyLoad from "react-lazyload";
 
 const careerdata = Careers;
