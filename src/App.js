@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import "./fonts/stylesheet.css";
-import "./App.css";
 import NavBar from "./NavBar/NavBar";
 import { Grid, Segment, Responsive } from "semantic-ui-react";
 import CareerList from "./List/CareerList";
@@ -13,8 +11,10 @@ import ToolList from "./List/ToolList";
 import SkillList from "./List/SkillList";
 import Footer from "./Footer/Footer";
 import Intro from "./Intro/Intro";
-import "lightgallery.js/dist/css/lightgallery.css";
 import LazyLoad from "react-lazyload";
+import "lightgallery.js/dist/css/lightgallery.css";
+import "./fonts/stylesheet.css";
+import "./App.css";
 
 const careerdata = Careers;
 const educationdata = Educations;
@@ -49,7 +49,6 @@ class App extends Component {
               />
             </LazyLoad>
           </Responsive>
-
           <Responsive as={Segment} maxWidth={549} className="MobileLogo">
           <LazyLoad height={190} datasource="/path/to/original">
             <iframe

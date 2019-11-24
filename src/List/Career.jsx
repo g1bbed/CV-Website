@@ -38,38 +38,38 @@ class Career extends Component {
     };
 
     const { career } = this.props;
-
     const PhotoItem = ({ image, group }) => (
       <LightgalleryItem group={group} src={image}>
         {/* <img src={image} style={{ width: "100%", height: "auto" }} alt="hi" /> */}
- 
-          <div
-            style={{ backgroundImage: `url(${image})` }}
-            className="LightGallerySlider"
-          ></div>
 
+        <div
+          style={{ backgroundImage: `url(${image})` }}
+          className="LightGallerySlider"
+        ></div>
       </LightgalleryItem>
     );
 
     return (
       <Fragment>
-        <LightgalleryProvider
-          thumbnail="true"
-          animateThumb="false"
-          showThumbByDefault="false"
-        >
-          <Swiper {...params}>
-            {career.gallery.map(gallery => (
-              <div key={gallery.id}>
-                <PhotoItem
-                  key={gallery.id}
-                  image={gallery.photo}
-                  group="group1"
-                />
-              </div>
-            ))}
-          </Swiper>
-        </LightgalleryProvider>
+        {career.gallery.length > 0 && (
+          <LightgalleryProvider
+            thumbnail="true"
+            animateThumb="false"
+            showThumbByDefault="false"
+          >
+            <Swiper {...params}>
+              {career.gallery.map(gallery => (
+                <div key={gallery.id}>
+                  <PhotoItem
+                    key={gallery.id}
+                    image={gallery.photo}
+                    group="group1"
+                  />
+                </div>
+              ))}
+            </Swiper>
+          </LightgalleryProvider>
+        )}
         <hr />
 
         <Grid container doubling columns={2}>

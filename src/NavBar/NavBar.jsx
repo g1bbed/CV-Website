@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
-import { Grid, Button } from "semantic-ui-react";
+import { Grid, Button, Popup } from "semantic-ui-react";
 import cv from "../files/StephanieClaireCurtisCV.pdf";
+import doc from "../files/CV.docx";
 
 class NavBar extends Component {
   render() {
@@ -9,32 +10,72 @@ class NavBar extends Component {
         <Grid>
           <Grid.Column
             width={16}
-            style={{ marginRight: "1%", marginTop: "10px", zIndex: '999' }}
+            style={{ marginRight: "1%", marginTop: "10px", zIndex: "999" }}
           >
-            {/* <Button class="arrow-button" color="black" icon="angle down large" floated="right" style={{borderRadius: 0, height: '50px'}}/> */}
-            <a
-              href="mailto:stephanieclairecurtis@gmail.com?subject=Hello"
-              target="_blank "
-              rel="noopener noreferrer"
+            <Popup
+              trigger={
+                <Button
+                  basic
+                  circular
+                  size="large"
+                  icon="mail"
+                  floated="right"
+                  href="mailto:stephanieclairecurtis@gmail.com?subject=Hello"
+                  target="_blank "
+                  rel="noopener noreferrer"
+                />
+              }
+              hoverable
+              content="Contact me"
+              position="bottom right"
+            />
+            <Popup
+              trigger={
+                <Button
+                  href="https://www.linkedin.com/in/stephanie-curtis-126756122/"
+                  target="_blank "
+                  basic
+                  circular
+                  size="large"
+                  icon="linkedin"
+                  floated="right"
+                />
+              }
+              hoverable
+              content="Follow me on Linkedin"
+              position="bottom right"
+            />
+            <Popup
+              trigger={
+                <Button
+                  basic
+                  circular
+                  size="large"
+                  icon="file"
+                  floated="right"
+                />
+              }
+              flowing
+              hoverable
+              position="bottom right"
             >
-              <Button basic circular size="large" icon="mail" floated="right" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/stephanie-curtis-126756122/"
-              target="_blank "
-              rel="noopener noreferrer"
-            >
-              <Button
-                basic
-                circular
-                size="large"
-                icon="linkedin"
-                floated="right"
-              />
-            </a>
-            <a href={cv} download>
-              <Button basic circular size="large" icon="file" floated="right" />
-            </a>
+              <Grid centered divided columns={2}>
+                <Grid.Column textAlign="center" style={{ width: "120px" }}>
+                  <p style={{ paddingBottom: "0px", marginBottom: "7px" }}>
+                    <b>My CV</b> in .pdf
+                  </p>
+                  <Button size="mini" href={cv} download>
+                    Choose
+                  </Button>
+                </Grid.Column>
+                <Grid.Column textAlign="center" style={{ width: "120px" }}>
+                  <p style={{ paddingBottom: "0px", marginBottom: "7px" }}>
+                    <b>My CV</b> in .doc
+                  </p>
+                  <Button size="mini" href={doc} download>Choose</Button>
+                </Grid.Column>
+              </Grid>
+            </Popup>
           </Grid.Column>
         </Grid>
       </Fragment>
